@@ -1,0 +1,90 @@
+/* ================= B2B pricing=========== */
+.landing{
+  padding: 50px 50px;
+  width: 100%;
+}
+.bg-light-purple {
+    background-color: #E9E8F6;
+    border-radius: 20px;
+  }
+  
+  .bg-light-pink {
+    background-color: #F0DFEF;
+    border-radius: 20px;
+  }
+  
+  .pricing-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+  }
+  
+  .min-vh-100 {
+    min-height: 100vh;
+  }
+  
+  @media (max-width: 767.98px) {
+    .pricing-card {
+      height: auto;
+      padding: 2rem;
+    }
+  }
+  .large-icon{
+    font-size: 50px;
+  }
+
+/* ================= END B2B pricing=========== */  
+/* ==================BookAdemo================== */
+.book-a-demo {
+  background: linear-gradient(90deg, rgb(225,228,247) 0%, rgb(251,247,246) 100%);
+  padding: 50px 50px;
+  /* margin-bottom: 20px; */
+  width: 100%;
+  }
+  
+  .form-container {
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .form-container .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-container .form-control {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+  }
+  
+  .form-container .form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+  }
+  
+  .form-container .form-check-label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-container .form-check-input {
+    margin-right: 0.5rem;
+  }
+  
+  .book-a-demo .text-danger {
+    color: #ff0000; 
+  }
+  
+  @media (max-width: 767.98px) {
+    .book-a-demo img {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+  
+/* ==================End BookAdemo================== */
