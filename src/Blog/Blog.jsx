@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col, Container, Card, CardImg, CardBody, CardText, Button } from 'reactstrap';
 import "./Blog.css";
+import Footer from '../footer/Footer';
 import stats from "../assets/stats.png";
 import office from "../assets/user1.png";
 import engineers from "../assets/user3.png";
@@ -75,7 +76,9 @@ const Blog = ({ isHomePage = false }) => {
           See All
         </Link>
       )}
+      <Footer/>
     </Container>
+    
   );
 };
 

@@ -19,7 +19,7 @@ function Faq() {
   };
 
   return (
-    <Container fluid className="mt-5 pt-4 mb-5">
+    <Container fluid className="mt-5 pt-4 mb-5 landing-section3">
       <h2 className="text-center">FAQ</h2>
       <ListGroup className="faq-list-group">
         <ListGroupItem 

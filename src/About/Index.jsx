@@ -8,7 +8,7 @@ const About =()=>{
         <div>
            <Team/>
            <Faq/>
-           <Blog/>
+           <Blog isHomePage={true}/>
            <Subscribe/>
            <Footer/>
         </div>
