@@ -1,6 +1,6 @@
 /* ================= B2B pricing=========== */
 .landing{
-  padding: 50px 50px;
+  padding: 0px 70px;
   width: 100%;
 }
 .bg-light-purple {
@@ -39,8 +39,7 @@
 /* ==================BookAdemo================== */
 .book-a-demo {
   background: linear-gradient(90deg, rgb(225,228,247) 0%, rgb(251,247,246) 100%);
-  padding: 50px 50px;
-  /* margin-bottom: 20px; */
+  padding: 20px 50px;
   width: 100%;
   }
   

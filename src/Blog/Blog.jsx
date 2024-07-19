@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaCalendarAlt } from "react-icons/fa";
-import { Row, Col, Container, Card, CardImg, CardBody, CardText, CardFooter, Button } from 'reactstrap';
+import { Row, Col, Container, Card, CardImg, CardBody, CardText, Button } from 'reactstrap';
 import "./Blog.css";
 import stats from "../assets/stats.png";
 import office from "../assets/user1.png";
 import engineers from "../assets/user3.png";
 
-const Blog = () => {
+const Blog = ({ isHomePage = false }) => {
   const blogData = [
     { id: 1, title: "Your Secret Ingredient - Building an Agile, Equitable, and High-Performance Workforce", date: "3, June 2024", image: stats },
     { id: 2, title: "Future of workforce in the Fashion Industry", date: "28, May 2024", image: office },
@@ -26,13 +25,16 @@ const Blog = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 9;
 
+  // If isHomePage is true, show only the 3 most recent blogs
+  const displayBlogs = isHomePage ? blogData.slice(0, 3) : blogData;
+
   // Calculate total pages
-  const totalPages = Math.ceil(blogData.length / blogsPerPage);
+  const totalPages = Math.ceil(displayBlogs.length / blogsPerPage);
 
   // Get current blogs
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
-  const currentBlogs = blogData.slice(indexOfFirstBlog, indexOfLastBlog);
+  const currentBlogs = displayBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -50,26 +52,29 @@ const Blog = () => {
                   <Link to={`/blog/${blog.id}`}>{blog.title}</Link>
                 </CardText>
               </CardBody>
-              <CardFooter className="d-flex align-items-center">
-                <FaCalendarAlt className="mr-2" />
-                <span>{blog.date}</span>
-              </CardFooter>
             </Card>
           </Col>
         ))}
       </Row>
-      <div className="pagination">
-        {Array.from({ length: totalPages }, (_, index) => (
-          <Button
-            key={index + 1}
-            onClick={() => paginate(index + 1)}
-            color={currentPage === index + 1 ? 'primary' : 'secondary'}
-            className="mx-1"
-          >
-            {index + 1}
-          </Button>
-        ))}
-      </div>
+      {!isHomePage && (
+        <div className="pagination">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <Button
+              key={index + 1}
+              onClick={() => paginate(index + 1)}
+              color={currentPage === index + 1 ? 'primary' : 'secondary'}
+              className="mx-1"
+            >
+              {index + 1}
+            </Button>
+          ))}
+        </div>
+      )}
+      {isHomePage && (
+        <Link to="/blog" className="see-all-link">
+          See All
+        </Link>
+      )}
     </Container>
   );
 };

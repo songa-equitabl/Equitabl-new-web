@@ -54,12 +54,11 @@
 
   /* Blog details */
   .blog-details-container {
-    padding-top: 4rem; 
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-top: 2rem; 
+    padding-left: 70px;
+    padding-right: 70px;
     margin-top: 2rem; 
     overflow-x: hidden; 
-    
   }
   
   .blog-meta {
@@ -139,3 +138,18 @@
     flex-direction: column;
   }
   
+.see-all-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color:  #5a67d8;;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.see-all-link:hover {
+  background-color:  #434190;
+  color:#fff;
+}

@@ -6,7 +6,7 @@
 /* ----------------- Header---------------------- */
 .landing-section {
   background: linear-gradient(90deg, rgb(225,228,247) 0%, rgb(251,247,246) 100%);
-  padding: 50px 50px;
+  padding: 50px 70px;
   overflow-x: hidden;
 }
 
@@ -54,7 +54,11 @@
 .mb-md-0 {
   margin-bottom: 0 !important;
 }
-
+.button-container {
+  display: flex;
+  justify-content: center; 
+  margin-top: 20px;
+}
 /* -------------End header---------------------- */
 .dashboard-container {
   text-align: center;
@@ -62,6 +66,7 @@
   background-color: rgb(249, 249, 254);
   width: 100%;
   overflow-x: hidden;
+  padding: 50px 70px;
 }
 
 .content {
@@ -145,7 +150,9 @@
 .mr-3 {
   margin-right: 1rem;
 }
-
+.landing-section2{
+  padding: 0px 70px;
+}
 /* -------------  Subscribe ----------------- */
 .subscribe-section {
   background: linear-gradient(90deg, rgba(234, 221, 255, 1) 0%, rgba(251, 228, 255, 1) 100%);
@@ -175,7 +182,7 @@
 
 .subscribe-section .btn-outline-primary:hover {
   background-color: #5a67d8;
-  color: white;
+  color: white !important;
 }
 
 .subscribe-section .d-flex {

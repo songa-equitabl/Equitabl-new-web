@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './Home/Index';
 import About from './About/Index';
 import Resource from './Resource/Index';
@@ -7,11 +7,16 @@ import CustomNavbar from './navbar/CustomNavbar';
 import BlogDetails from './Blog/BlogDetails';
 import './App.css';
 import Blog from './Blog/Blog';
+import PrivacyPolicy from './Privacy/PrivacyPolicy';
+import Form from './Form/Form';
 
 const App = () => {
+  const location = useLocation();
+  const hideNavbarPaths = ['/privacy-policy'];
+
   return (
-    <Router>
-      <CustomNavbar />
+    <>
+      {!hideNavbarPaths.includes(location.pathname) && <CustomNavbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Resource" element={<Resource />} />
@@ -19,9 +24,17 @@ const App = () => {
         <Route path="/About" element={<About />} />
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/blog/:id" element={<BlogDetails />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
+        <Route path="/form" element={<Form/>}/>
       </Routes>
-    </Router>
+    </>
   );
 };
 
-export default App;
+const AppWithRouter = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default AppWithRouter;

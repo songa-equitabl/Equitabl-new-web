@@ -6,7 +6,7 @@ import "./Home.css";
 function Partners() {
 
   return (
-        <Container fluid className="text-center">
+        <Container fluid className="text-center landing-section2">
         <h2>Our Partners</h2>
         <div className="logo-section">
             <img src={foundu} alt="FoundU logo"  className="logo" />

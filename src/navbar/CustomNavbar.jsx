@@ -29,7 +29,7 @@ const CustomNavbar = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mx-auto" navbar>
              <NavItem>
-              <RouterNavLink exact to="/"className="nav-link" activeClassName="active">Products</RouterNavLink>
+              <RouterNavLink exact to="/"className="nav-link" activeClassName="active">Home</RouterNavLink>
              </NavItem>
             <NavItem>
               <RouterNavLink exact to="/pricing" className="nav-link" activeClassName="active">Pricing</RouterNavLink>
@@ -38,14 +38,17 @@ const CustomNavbar = () => {
               <RouterNavLink exact to="/Resource" className="nav-link" activeClassName="active">Resources</RouterNavLink>
             </NavItem>
             <NavItem>
-              <RouterNavLink exact to="/about" className="nav-link" activeClassName="active">About us</RouterNavLink>
+              <RouterNavLink exact to="/about" className="nav-link" activeClassName="active">About Us</RouterNavLink>
             </NavItem>
           </Nav>
           <NavbarText className="mr-3">
+
             <Button outline color="primary" className="outline-primary">Login</Button>
           </NavbarText>
           <NavbarText>
+            <Link to="/form">
             <Button color="primary" className="btn-primary">Book a demo</Button>
+            </Link>
           </NavbarText>
         </Collapse>
       </Navbar>

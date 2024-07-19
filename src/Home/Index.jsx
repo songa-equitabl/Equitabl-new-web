@@ -12,7 +12,7 @@ const Home = ()=>{
         <MiddleSection1/>
         <MiddleSection2/>
         <Partners/>
-        <Blog/>
+        <Blog isHomePage={true}/>
         <Subscribe/>
         <Footer/>
       </div>

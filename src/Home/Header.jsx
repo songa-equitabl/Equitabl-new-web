@@ -9,9 +9,11 @@ const Header = () => {
         <Col md="6" className="text-center text-md-left mb-4 mb-md-0">
           <h2>Equitabl Business Intelligence</h2>
           <p>Seamlessly integrate HR and Finance data for smarter Financial and Workforce Planning.</p>
-          <Button color="primary">
-            Book a demo <FaArrowRight />
-          </Button>
+          <div className="button-container">
+            <Button color="primary">
+              Book a demo <FaArrowRight />
+            </Button>
+          </div>
         </Col>
         <Col md="6" className="text-center">
           <img src={image} alt="landing page" className="img-fluid img-header" />
