@@ -1,5 +1,5 @@
 import { Container, Row, Col } from 'reactstrap';
-import logo from "../assets/logo.ico"; 
+import logo from '../assets/Equitabl-black.png'; 
 import './PrivacyPolicy.css';
 import { Link } from 'react-router-dom';
 const PrivacyPolicy = () => {
@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
     <Container className="container privacy-section privacy-page-container">
       <Row className="justify-content-center mt-2">
         <Col md="8" className="text-center">
-          <img src={logo} alt="Equitabl Privacy Policy" className="img-fluid mb-4" style={{ maxWidth: '150px' }} />
+          <img src={logo} alt="Equitabl Privacy Policy" className="img-fluid mb-4" style={{ maxWidth: '180px' }} />
           <h1>Equitabl Privacy Policy</h1>
         </Col>
       </Row>

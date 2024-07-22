@@ -11,7 +11,9 @@ import {
   Button,
 } from 'reactstrap';
 import './CustomNavbar.css';
-import logo from '../assets/logo.ico';
+// import logo from '../assets/logo.ico';
+import logo2 from '../assets/Equitabl-black.png';
+
 
 const CustomNavbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -22,8 +24,8 @@ const CustomNavbar = () => {
     <div className="navbar-container">
       <Navbar expand="md">
         <NavbarBrand className="navbar-brand" tag={Link} to="/">
-          <img src={logo} alt="Equitabl Logo" className="navbar-logo" />
-          Equitabl
+          <img src={logo2} alt="Equitabl Logo" className="navbar-logo" />
+          {/* Equitabl */}
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

@@ -6,7 +6,7 @@
 /* ----------------- Header---------------------- */
 .landing-section {
   background: linear-gradient(90deg, rgb(225,228,247) 0%, rgb(251,247,246) 100%);
-  padding: 50px 70px;
+  padding: 50px 120px;
   overflow-x: hidden;
 }
 
@@ -66,7 +66,7 @@
   background-color: rgb(249, 249, 254);
   width: 100%;
   overflow-x: hidden;
-  padding: 50px 70px;
+  padding: 50px 120px;
 }
 
 .content {
@@ -151,7 +151,7 @@
   margin-right: 1rem;
 }
 .landing-section2{
-  padding: 0px 70px;
+  padding: 0px 120px;
 }
 /* -------------  Subscribe ----------------- */
 .subscribe-section {
@@ -227,13 +227,13 @@
   bottom: 0;
   right: 0;
   background-color: #f8f9fa; 
-  padding: 10px 20px;
+  padding: 10px 50px;
   overflow: hidden; 
   width: 100%; 
 }
 
 .footer-logo {
-  width: 30px; 
+  width: 50px; 
   height: auto;
 }
 
@@ -256,6 +256,9 @@
 
 .mr-2 {
   margin-right: 0.5rem;
+}
+.footer-link{
+  color: #333;
 }
 
 /* ---------------end Footer=---------------------------- */
@@ -290,3 +293,35 @@
   }
 }
 /*  ================= Logo section ========================================== */
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .landing-section, .dashboard-container {
+    padding: 50px 120px;
+  }
+}
+
+@media (max-width: 992px) {
+  .landing-section, .dashboard-container {
+    padding: 50px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-section, .dashboard-container {
+    padding: 50px 15px;
+  }
+  .landing-section2 {
+    padding: 0px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .landing-section, .dashboard-container {
+    padding: 70px 10px;
+  }
+  .subscribe-section {
+    padding: 30px 10px;
+  }
+}
+
