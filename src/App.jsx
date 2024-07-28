@@ -9,6 +9,7 @@ import './App.css';
 import Blog from './Blog/Blog';
 import PrivacyPolicy from './Privacy/PrivacyPolicy';
 import Form from './Form/Form';
+import './fonts/segoe-ui.css';
 
 const App = () => {
   const location = useLocation();

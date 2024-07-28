@@ -43,12 +43,12 @@ const MiddleSection1 = () => {
             </li>
             <li>
               <Button className={`custom-button ${selectedButton === "Workforce Planning" ? "selected" : ""}`} onClick={() => handleButtonClick("Workforce Planning")}>
-                <FaUserPlus className="icon" /> Workforce Planning
+                <FaUserPlus className="icon" /> Skills Planning
               </Button>
             </li>
             <li>
               <Button className={`custom-button ${selectedButton === "Pay Gap Reporting" ? "selected" : ""}`} onClick={() => handleButtonClick("Pay Gap Reporting")}>
-                <BsGraphUpArrow className="icon" /> Pay Gap Reporting
+                <BsGraphUpArrow className="icon" /> Pay Gap Analysis
               </Button>
             </li>
             <li>

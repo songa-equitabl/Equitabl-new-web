@@ -1,18 +1,39 @@
+/* eslint-disable react/no-unescaped-entities */
+import { useState } from 'react';
 import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import "./Pricing.css";
-import pic from "../assets/image1.png";
+
+import pic from '../assets/image1.png';
+import pic2 from '../assets/image2.png';
+import pic3 from '../assets/SkillsMap.png';
+
+const images = [pic, pic2, pic3];
 const BookADemo = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const handleDotClick = (index) => {
+    setCurrentSlide(index);
+  };
   return (
     <Container fluid className="book-a-demo">
     <Row>
-      <Col md="6" className="text-center text-md-left">
-        <h2>Book a demo</h2>
-        <p>
-          In a 30-min call, we'll give you a tour of our software and demonstrate how Omni can help you automate your end-to-end HR processes!
-        </p>
-        <img src={pic} alt="Demo" className="img-fluid" />
-        <p>Time tracking</p>
-      </Col>
+    <Col md="6" className="text-center text-md-left">
+          <h2>Book a demo</h2>
+          <p>
+            In a 30-min call, we'll give you a demo of our product and demonstrate how Equitabl can help you do smarter workforce and financial planning for your business.
+          </p>
+          <div className="slideshow-container">
+            <img src={images[currentSlide]} alt="Demo" className="img-fluid" />
+            <div className="dots-container">
+              {images.map((_, index) => (
+                <span
+                  key={index}
+                  className={`dot ${index === currentSlide ? 'active' : ''}`}
+                  onClick={() => handleDotClick(index)}
+                ></span>
+              ))}
+            </div>
+          </div>
+        </Col>
       <Col md="6">
         <div className="form-container p-4 bg-white rounded shadow-sm">
           <Form>
@@ -56,55 +77,37 @@ const BookADemo = () => {
             </FormGroup>
             <FormGroup>
               <Label for="challenges">
-                What challenges are you looking to solve with an HR software? <span className="text-danger">*</span>
+                Which of these product features are you interested in? <span className="text-danger">*</span>
               </Label>
               <div>
                 <FormGroup check>
                   <Label check>
                     <Input type="checkbox" name="challenges" />{' '}
-                    Organizing employee data and automating HR processes
+                    Payroll Dashboard
                   </Label>
                 </FormGroup>
                 <FormGroup check>
                   <Label check>
                     <Input type="checkbox" name="challenges" />{' '}
-                    Recruitment
+                    Skills Map
                   </Label>
                 </FormGroup>
                 <FormGroup check>
                   <Label check>
                     <Input type="checkbox" name="challenges" />{' '}
-                    Onboarding
+                    Skills Planning
                   </Label>
                 </FormGroup>
                 <FormGroup check>
                   <Label check>
                     <Input type="checkbox" name="challenges" />{' '}
-                    Leave management
+                    Pay Gap Analysis
                   </Label>
                 </FormGroup>
                 <FormGroup check>
                   <Label check>
                     <Input type="checkbox" name="challenges" />{' '}
-                    Time tracking
-                  </Label>
-                </FormGroup>
-                <FormGroup check>
-                  <Label check>
-                    <Input type="checkbox" name="challenges" />{' '}
-                    Performance
-                  </Label>
-                </FormGroup>
-                <FormGroup check>
-                  <Label check>
-                    <Input type="checkbox" name="challenges" />{' '}
-                    Payroll
-                  </Label>
-                </FormGroup>
-                <FormGroup check>
-                  <Label check>
-                    <Input type="checkbox" name="challenges" />{' '}
-                    Reimbursement (claims)
+                   WGEA Reporting
                   </Label>
                 </FormGroup>
               </div>

@@ -1,5 +1,5 @@
 import { Container, Row, Col } from 'reactstrap';
-import logo2 from '../assets/icon.png';
+import logo from '../assets/Equitabl-black.png';
 import { Link } from 'react-router-dom';
 import '../Home/Home.css';
 
@@ -11,7 +11,7 @@ const Footer = () => {
           <Link to="/privacy-policy" className="footer-link">Our Privacy Policy</Link>
         </Col>
         <Col className="d-flex justify-content-end align-items-center">
-          <img src={logo2} alt="logo" className="footer-logo mr-2" />
+          <img src={logo} alt="logo" className="footer-logo mr-2" />
           <span className="footer-text">All rights reserved</span>
         </Col>
       </Row>

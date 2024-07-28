@@ -11,8 +11,7 @@ import {
   Button,
 } from 'reactstrap';
 import './CustomNavbar.css';
-// import logo from '../assets/logo.ico';
-import logo2 from '../assets/Equitabl-black.png';
+import logo from '../assets/Equitabl-black.png';
 
 
 const CustomNavbar = () => {
@@ -24,7 +23,7 @@ const CustomNavbar = () => {
     <div className="navbar-container">
       <Navbar expand="md">
         <NavbarBrand className="navbar-brand" tag={Link} to="/">
-          <img src={logo2} alt="Equitabl Logo" className="navbar-logo" />
+          <img src={logo} alt="Equitabl Logo" className="navbar-logo" />
           {/* Equitabl */}
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />

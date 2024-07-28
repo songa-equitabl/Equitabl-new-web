@@ -99,6 +99,41 @@
   color: #ff0000; 
 }
 
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.dots-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #5a67d8;
+}
+
+.dot:hover {
+  background-color: #5a67d8;
+}
+
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .book-a-demo {

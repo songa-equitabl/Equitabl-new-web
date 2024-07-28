@@ -41,20 +41,20 @@ const Blog = ({ isHomePage = false }) => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <Container fluid className="text-center my-5 blog-details-container">
-      <h2 className="mb-2">Blogs & Thoughts Leaderships</h2>
-      <Row className="my-5">
+    <Container fluid className="text-center my-2 blog-details-container">
+      <h2 className="mb-2">Blogs & Thought Leadership</h2>
+      <Row className='my-5'>
         {currentBlogs.map(blog => (
           <Col md="4" className="mb-4" key={blog.id}>
-            <Card className="h-80 shadow-sm">
-              <CardImg top src={blog.image} alt={`blog${blog.id}`} className="blog-image" />
-              <CardBody className="d-flex flex-column">
-                <CardText className="text-primary flex-grow-1">
-                  <Link to={`/blog/${blog.id}`}>{blog.title}</Link>
-                </CardText>
-              </CardBody>
-            </Card>
-          </Col>
+          <Card className="shadow-sm">
+            <CardImg top src={blog.image} alt={`blog${blog.id}`} className="blog-image" />
+            <CardBody>
+              <CardText className="text-primary">
+                <Link to={`/blog/${blog.id}`}>{blog.title}</Link>
+              </CardText>
+            </CardBody>
+          </Card>
+        </Col>        
         ))}
       </Row>
       {!isHomePage && (

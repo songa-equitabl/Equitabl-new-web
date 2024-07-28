@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Subscribe = () => {
   return (
     <Container fluid className="subscribe-section">
-      <div  className="text-center py-5">
+      <div  className="text-center">
         <h2 className="mb-3">Ready to supercharge your business?</h2>
         <span className="mb-4 d-block">Plan starts from $99/month</span>
         <div className="mb-4">

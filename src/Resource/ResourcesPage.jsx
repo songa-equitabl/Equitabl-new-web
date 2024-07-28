@@ -1,12 +1,10 @@
 import { useState } from 'react';
-import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Nav, NavItem, NavLink, Card, CardBody, CardTitle, CardText, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Nav, NavItem, NavLink, Card, CardBody, CardTitle, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 import './Resources.css';
 import stats from "../assets/stats.png";
 import office from "../assets/user1.png";
 import engineers from "../assets/user3.png";
-const categories = ["Benefits", "DEI", "Engagement", "Global HR Insights", "HR Administration", "HRIS", "Omni News", "Onboarding"];
-const allMenus = ["Payroll", "People Management", "Performance", "Recruitment", "Tech", "Time Off"];
-
+const categories = ["Diversity, Equity and Inclusion (DEI)", "Pay Gaps", "HR Analytics", "Skills", "Payroll", "HR Technology", "Global Trends"];
 const articles = [
   {
     title: "Tips For Increasing Workplace Efficiency And How HRIS Can Help",
@@ -33,28 +31,22 @@ const Resources = () => {
     setActiveCategory(category);
     setActiveMenu(null);
   };
-
-  const handleMenuClick = (menu) => {
-    setActiveCategory("All");
-    setActiveMenu(menu);
-  };
-
   return (
     <Container className="resources-container custom-padding">
-      <h1>Your resource for the latest insights, tips, and industry best practices.</h1>
-      <p>Sign up for our newsletter for your <strong>Monthly</strong> dose of all things HR, Workforce Data, Future of Work, Diversity, Equity and Inclusion (DEI), and many more.</p>
+      <h3>Your resource for the latest insights, tips, and industry best practices.</h3>
+      <p style={{fontSize:"12px"}}>Sign up for our newsletter for your <strong>Monthly</strong> dose of all things HR, Workforce Data, Future of Work, Diversity, Equity and Inclusion (DEI), and many more.</p>
       <Form inline className="newsletter-form">
-        <FormGroup>
+        <FormGroup className="form-group">
           <Label for="firstName" hidden>First Name</Label>
-          <Input type="text" name="firstName" id="firstName" placeholder="First Name" className="mr-2" />
+          <Input type="text" name="firstName" id="firstName" placeholder="First Name" />
         </FormGroup>
-        <FormGroup>
+        <FormGroup className="form-group">
           <Label for="email" hidden>Email</Label>
-          <Input type="email" name="email" id="email" placeholder="Email" className="mr-2" />
+          <Input type="email" name="email" id="email" placeholder="Email" />
         </FormGroup>
         <Button color="primary">Level Up Now!</Button>
       </Form>
-      <Nav pills className="categories-nav navbar">
+      <Nav pills className="categories-nav menus-nav navbar">
         <NavItem>
           <NavLink 
             href="#"
@@ -64,58 +56,44 @@ const Resources = () => {
             All
           </NavLink>
         </NavItem>
-        {categories.map(category => (
-          <NavItem key={category}>
-            <NavLink 
-              href="#"
-              className={`category-link nav-link ${activeCategory === category ? 'active' : ''}`}
-              onClick={() => handleCategoryClick(category)}
-            >
-              {category}
-            </NavLink>
-          </NavItem>
-        ))}
-      </Nav>
-      {activeCategory === "All" && (
-        <Nav pills className="menus-nav navbar">
-          {allMenus.map(menu => (
-            <NavItem key={menu}>
-              <NavLink 
-                href="#"
-                className={`category-link nav-link ${activeMenu === menu ? 'active' : ''}`}
-                onClick={() => handleMenuClick(menu)}
-              >
-                {menu}
-              </NavLink>
-            </NavItem>
-          ))}
-        </Nav>
-      )}
-      <Row>
-        {activeCategory === "All" && !activeMenu && articles.map(article => (
-          <Col md="4" key={article.title} className="mb-4">
-            <Card>
-              <img src={article.image} alt={article.title} className="card-img-top" />
-              <CardBody>
-                <CardTitle tag="h5">{article.title}</CardTitle>
-                <CardText>
-                  <small className="text-muted">{article.date}</small>
-                </CardText>
-              </CardBody>
-            </Card>
-          </Col>
-        ))}
-        {activeCategory === "All" && activeMenu && (
-          <Col md="12">
-            <h2>{activeMenu}</h2>
-          </Col>
-        )}
-        {activeCategory !== "All" && (
-          <Col md="12">
-            <h2>{activeCategory} Clicked</h2>
-          </Col>
-        )}
-      </Row>
+  {categories.map(category => (
+    <NavItem key={category}>
+      <NavLink 
+        href="#"
+        className={`category-link nav-link ${activeCategory === category ? 'active' : ''}`}
+        onClick={() => handleCategoryClick(category)}
+      >
+        {category}
+      </NavLink>
+    </NavItem>
+  ))}
+</Nav>
+<Row className="my-3">
+  {activeCategory === "All" && !activeMenu && articles.map(article => (
+    <Col md="4" key={article.title} className="cards">
+      <Card className="shadow-sm">
+        <img src={article.image} alt={article.title} className="blog-image" />
+        <CardBody className="d-flex flex-column">
+          <CardTitle tag="p" className="text-primary flex-grow-1">
+            {article.title}
+          </CardTitle>
+        </CardBody>
+      </Card>
+    </Col>
+  ))}
+  {activeCategory === "All" && activeMenu && (
+    <Col md="12">
+      <h2>{activeMenu}</h2>
+    </Col>
+  )}
+  {activeCategory !== "All" && (
+    <Col md="12">
+      <h2>{activeCategory} Clicked</h2>
+    </Col>
+  )}
+</Row>
+
+
       <Pagination aria-label="Page navigation example">
         <PaginationItem>
           <PaginationLink first href="#" />
