@@ -1,13 +1,26 @@
 import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import './Pricing.css'; 
-
+import background from "../assets/pic1.jpg"
 const PricingPage = () => {
   return (
     <div className="pricing-page">
-      <div className="background-image"></div>
       <Container className="form-containerr">
+      <img
+        src={background}
+        alt="Background"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          filter: 'blur(2px)',
+          zIndex: -1,
+        }}
+      />
         <Row>
-          <Col>
+          <Col className='form-containerr'>
             <h2 className="text-center">Our Pricing</h2>
             <Form>
               <FormGroup>

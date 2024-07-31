@@ -13,7 +13,6 @@ import {
 import './CustomNavbar.css';
 import logo from '../assets/Equitabl-black.png';
 
-
 const CustomNavbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -22,16 +21,17 @@ const CustomNavbar = () => {
   return (
     <div className="navbar-container">
       <Navbar expand="md">
-        <NavbarBrand className="navbar-brand" tag={Link} to="/">
-          <img src={logo} alt="Equitabl Logo" className="navbar-logo" />
-          {/* Equitabl */}
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
+        <div className="navbar-brand">
+          <NavbarBrand tag={Link} to="/">
+            <img src={logo} alt="Equitabl Logo" className="navbar-logo" />
+          </NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+        </div>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mx-auto" navbar>
-             <NavItem>
-              <RouterNavLink exact to="/"className="nav-link" activeClassName="active">Home</RouterNavLink>
-             </NavItem>
+            <NavItem>
+              <RouterNavLink exact to="/" className="nav-link" activeClassName="active">Home</RouterNavLink>
+            </NavItem>
             <NavItem>
               <RouterNavLink exact to="/pricing" className="nav-link" activeClassName="active">Pricing</RouterNavLink>
             </NavItem>
@@ -43,12 +43,11 @@ const CustomNavbar = () => {
             </NavItem>
           </Nav>
           <NavbarText className="mr-3">
-
             <Button outline color="primary" className="outline-primary">Login</Button>
           </NavbarText>
           <NavbarText>
             <Link to="/form">
-            <Button color="primary" className="btn-primary">Book a demo</Button>
+              <Button color="primary" className="btn-primary">Book a demo</Button>
             </Link>
           </NavbarText>
         </Collapse>

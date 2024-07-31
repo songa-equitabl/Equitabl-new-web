@@ -1,3 +1,4 @@
+/* Container for the navbar */
 .navbar-container {
   width: 100%;
   position: fixed;
@@ -7,16 +8,19 @@
   overflow-x: hidden;
 }
 
+/* Main Navbar */
 .navbar {
-  justify-content: center; 
   background: linear-gradient(90deg, rgb(225, 228, 247) 0%, rgb(251, 247, 246) 100%);
   padding: 5px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures the logo and toggler are on opposite sides */
 }
 
+/* Logo styles */
 .navbar-logo {
   width: 150px;
   height: 70px;
-  /* background-color: black; */
 }
 
 .navbar-logo img {
@@ -24,17 +28,28 @@
   height: 100%;
 }
 
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  padding: 0; 
-  margin-right: 10px;
+/* Toggler */
+.navbar-toggler {
+  border: none;
+  margin-left: auto;
 }
 
+/* Collapse menu */
+.collapse {
+  width: 100%;
+}
+
+.navbar-brand, .navbar-nav, .navbar-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; 
+}
+
+/* Additional styling for nav items and links */
 .navbar-nav .nav-item .nav-link {
   padding: 8px 10px; 
   margin-right: 5px; 
-  /* color: black; */
   transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
   position: relative;
 }
@@ -51,14 +66,12 @@
   left: 0;
 }
 
-.navbar-nav .nav-item .nav-link:hover::after {
-  width: 100%;
-}
-
+.navbar-nav .nav-item .nav-link:hover::after,
 .navbar-nav .nav-item .nav-link.active::after {
   width: 100%;
 }
 
+/* Dropdown styling */
 .dropdown-toggle::after {
   margin-left: 5px;
   border-top: 0.3em solid;
@@ -85,10 +98,7 @@
   color: white;
 }
 
-.navbar-toggler {
-  margin-left: auto;
-}
-
+/* Button styles */
 .btn-primary {
   background-color: #5a67d8;
   border-color: #5a67d8;
