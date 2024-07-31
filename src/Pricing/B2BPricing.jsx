@@ -50,7 +50,7 @@ const PricingPage = () => {
                   I consent to Equitabl using my details to reach out to me in the future for purposes related to their product.
                 </Label>
               </FormGroup>
-              <Button color="primary" className="mt-3">Submit</Button>
+              <Button color="primary" className="mt-3 buttonn">Submit</Button>
             </Form>
           </Col>
         </Row>

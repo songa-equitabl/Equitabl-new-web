@@ -17,45 +17,43 @@
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   max-width: 600px;
-  width: 100%; /* Full width on smaller screens */
+  width: 100%; 
   z-index: 1;
 }
 
-/* Typography adjustments */
+
 h1 {
   margin-bottom: 1.5rem;
   text-align: center;
-  font-size: 1.25rem; /* Use rem for scalable units */
+  font-size: 1.25rem; 
 }
 
 .form-group {
   margin-bottom: 1.5rem;
 }
 
-button {
+.buttonn {
   width: 100%;
 }
 
-/* Media Queries for Responsiveness */
+
 @media (min-width: 768px) {
   .form-containerr {
-    width: 70%; /* Adjust width for tablets */
+    width: 70%; 
   }
 }
 
 @media (min-width: 992px) {
   .form-containerr {
-    width: 50%; /* Adjust width for larger screens */
+    width: 50%; 
   }
 }
 
 @media (min-width: 1200px) {
   .form-containerr {
-    width: 40%; /* Further adjustment for very large screens */
-    
+    width: 40%; 
   }
 }
-
 
 /* ================= END B2B pricing =========== */
 
